@@ -1,0 +1,3 @@
+Turn on spark first to create session (C:\Spark\spark-3.1.2-bin-hadoop3.2\bin>pyspark)
+create jupyter notebook and point to it. (Create notebook in VSCode Palette)
+run pyspark
