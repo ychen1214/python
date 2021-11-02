@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import re
 
-with open("doc.html") as fp:
+with open("D:\\python\\beautifulsoup\\doc.html") as fp:
     soup = BeautifulSoup(fp, "html.parser")
     #print(soup.head.title)
     #print(soup.body.a.text)
