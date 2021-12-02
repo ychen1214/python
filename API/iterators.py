@@ -53,3 +53,4 @@ class PowTwo:
 
 for i in PowTwo(5):
     print(i)
+  
