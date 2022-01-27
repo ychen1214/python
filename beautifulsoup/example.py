@@ -1,7 +1,13 @@
+from msilib import Directory
 from bs4 import BeautifulSoup
 import re
 
-with open("D:\\python\\beautifulsoup\\doc.html") as fp:
+import os
+cwd = os.getcwd()
+
+print(cwd)
+
+with open("beautifulsoup\doc.html") as fp:
     soup = BeautifulSoup(fp, "html.parser")
     #print(soup.head.title)
     #print(soup.body.a.text)

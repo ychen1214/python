@@ -1,18 +1,18 @@
-import requests
+#import requests
 import time
 import csv 
 from bs4 import BeautifulSoup
 import re
 import os
 
-directory = "D:\\python\\beautifulsoup\\html"
+directory = "beautifulsoup\html"
 for filename in os.listdir(directory):
     if filename.endswith(".html"): 
         #print(os.path.join(directory, filename))
         with open((os.path.join(directory, filename)),"r", encoding="utf8") as fp: 
             soup = BeautifulSoup(fp, "html.parser")   
-            print(soup.find_all("div",id="merchant-info"))
-            #print(soup.find_all("div",id="sfsb_accordion_head"))
+            #print(soup.find_all("div",id="merchant-info"))
+            print(soup.find_all("div",id="tmmSwatches"))
             #print(soup.find_all("a",id="sellerProfileTriggerId"))    
             #print(os.path.join(directory, filename))
             #print(soup.find_all(["a","data-is-ubb","class"],id="sellerProfileTriggerId"))
