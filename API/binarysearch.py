@@ -31,10 +31,10 @@ def binary_search_recursive(a_list, item):
     else:
         i = (first + last) // 2
         if item == a_list[i]:
-            return 'found'.,format(item=item)
+            return 'found'.format(item=item)
         else:
             if a_list[i] < item:
                 return binary_search_recursive(a_list[i+1],item)            
             else:
                 return binary_search_recursive(a_list[:i],item)
-                
+
