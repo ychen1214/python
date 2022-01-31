@@ -1,10 +1,8 @@
 #import requests
-import time
-import csv
-from turtle import clear 
+
 from bs4 import BeautifulSoup
-import re
 import os
+from lxml import etree
 
 directory = "beautifulsoup\html"
 for filename in os.listdir(directory):
@@ -12,11 +10,14 @@ for filename in os.listdir(directory):
         #print(os.path.join(directory, filename))
         with open((os.path.join(directory, filename)),"r", encoding="utf8") as fp: 
             soup = BeautifulSoup(fp, "html.parser")   
+            dom = etree.HTML(str(soup))
+            print(dom.xpath('//*[@id="a-autoid-1-announce"]/span[1]'))
+            
             #print(soup.find_all("div",id="merchant-info"))
             #print(soup.find("span",id="productTitle").text) #Title
             #print(soup.find("div",id="tmmSwatches"))
             #print(soup.find_all("span",{"class":"a-size-base a-color-secondary"}))
-            t = (soup.find("div",id="tmmSwatches"))    
+            #t = (soup.find("div",id="tmmSwatches"))    
             #for i in t.find_all('ul',{"class":"a-unordered-list a-nostyle a-button-list a-horizontal"}):
                 # for x in i.find_all("span",{"class":"a-size-base a-color-price a-color-price"}):                    
                 #     print(x.text)        
