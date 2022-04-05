@@ -1,7 +1,13 @@
-def doit(text):      
-  import re
-  matches = re.findall(r'"(.+?)"',text)
-  # matches is now ['String 1', 'String 2', 'String3']
-  return ",".join(matches)
+import re
 
-print (doit("Regex should return \"String 1\" or \"String 2\" or \"String3\" "))
+s ='"orange", carnage, dongle,test'
+#print(re.search('(?+<!\()(?<!eq )"(?!\)|\Z)',s))
+
+print(re.search('(?<!,|,|^)',s))
+
+#"(?<!,|,|^)"(?!\,|$)"
+#(?<!,|,|^)"(?!,|$)
+
+#r'\b\s*"(?!,|$)', '" "'
+
+#(?<!\()(?<!eq )'(?!\)|\Z)
